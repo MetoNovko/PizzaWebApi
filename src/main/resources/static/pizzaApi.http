@@ -1,0 +1,48 @@
+POST http://localhost:8080/pizzas
+Content-Type: application/json
+
+{
+  "name": "testPizza1",
+  "description": "abcd",
+  "ingredients": [
+    "testIngredient5",
+    "testIngredient4"
+  ],
+  "veggie": true
+}
+
+###
+
+PUT http://localhost:8080/pizzas/testPizza1
+Content-Type: application/json
+
+{
+  "name": "nameChanged",
+  "description": "testPizza",
+  "ingredients": [
+    "testIngredient"
+  ],
+  "veggie": true
+}
+
+###
+
+DELETE http://localhost:8080/pizzas/nameChanged
+
+###
+
+GET http://localhost:8080/pizzas
+
+###
+
+GET http://localhost:8080/pizzas?totalIngredients=100
+
+###
+
+GET http://localhost:8080/pizzas/compare?pizza1=testPizza1&pizza2=testPizza1
+
+###
+
+GET http://localhost:8080/pizzas/spicy?spicy=true
+
+###

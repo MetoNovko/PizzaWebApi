@@ -1,0 +1,48 @@
+POST http://localhost:8080/ingredients
+Content-Type: application/json
+
+{
+  "name":"testIngredient4",
+  "spicy": true,
+  "veggie": true,
+  "amount": 1.21
+}
+
+###
+
+PATCH http://localhost:8080/ingredients/testIngredient
+Content-Type: application/json
+
+{
+  "name":"testIngredient",
+  "spicy": true,
+  "veggie": true,
+  "amount": 10
+}
+
+###
+
+DELETE http://localhost:8080/ingredients/testIngredient4
+
+
+###
+
+GET http://localhost:8080/ingredients
+
+###
+
+GET http://localhost:8080/ingredients/testIngredient
+
+###
+
+GET http://localhost:8080/ingredients?spicy=true
+
+###
+
+GET http://localhost:8080/ingredients/testIngredient2/pizzas
+
+###
+
+
+
+
